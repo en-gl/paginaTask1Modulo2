@@ -5,9 +5,7 @@
 }
 
 header {
-    background-color: rgb(0, 0, 0) !important;
-    height: 10vh;
-
+    min-height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,6 +17,7 @@ header {
     border: 2px solid rgb(0, 0, 0);
     border-radius: .6rem;
     padding: .5rem 1rem !important;
+    margin-right: 1rem;
 }
 
 a.active {
@@ -26,47 +25,35 @@ a.active {
     border: 2px solid #d90368 !important;
 }
 
+a.nav-link:hover {
+    background-color: #ff1b85;;
+}
+
 .carousel-item {
     height: 220px !important;
+    
 }
 
 .imgCarousel {
     width: 100% !important;
     object-fit: cover !important;
     object-position: center !important;
+    opacity: .6 ;
 }
 
 main {
     min-height: 83vh;
-    background: linear-gradient(-180deg,rgb(0, 90, 90),rgb(0, 63, 63),#490022, #7e003b);
-
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 50% 0%;
-    }
-
-    25% {
-        background-position: 50% 50%;
-    }
-
-    50% {
-        background-position: 50% 100%;
-    }
-    
-    75% {
-        background-position: 50% 75%;
-    }
-
-    100% {
-        background-position: 50% 0%;
-    }
+    background: linear-gradient(-180deg,rgb(0, 66, 66),rgb(34, 48, 48),#830741, #272626);
 }
 
 .inputContainer {
     display: flex;
     justify-content: space-between;
+    margin: 2rem 4rem;
+}
+
+.row {
+    gap: 5rem;
 }
 
 .card {
@@ -164,6 +151,10 @@ main {
     color: white;
 }
 
+.formContainer {
+    width: 80% !important;
+}
+
 form {
     width: 60%;
     margin: 0 auto;
@@ -177,13 +168,19 @@ form label {
 form input,
 textarea {
     width: 100%;
-
     border: none;
     padding: 1rem;
     border-radius: 1rem;
     background: #e8e8e8;
     box-shadow: 0px 5px 10px -5px #020202;
     transition: 0.3s;
+}
+
+.form {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
 }
 
 
@@ -195,12 +192,16 @@ textarea {
     transition: 0.3s;
 }
 
+.table {
+    width: 75% !important;
+}
+
 td {
     height: 2.5rem !important;
 }
 
 footer {
-    height: 7vh;
+    min-height: 7vh;
     background-color: rgb(0, 0, 0) !important;
     border-top: 5px solid #d90368;
     color: #d90368;
@@ -224,6 +225,19 @@ footer svg {
         align-items: center;
         gap: 1rem;
     }
+
+    .formContainer {
+        width: 80% !important;
+    }
+
+    form {
+        width: 100%;
+        
+    }
+    
+    form .submit {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 960px) {
@@ -231,7 +245,6 @@ footer svg {
         flex-direction: column;
         align-items: center;
         justify-content: center !important;
-        height: 20vh;
         padding: .5rem;
     }
 
@@ -245,7 +258,13 @@ footer svg {
         border: 2px solid rgb(0, 0, 0);
         border-radius: .6rem;
         padding: .4rem .7rem !important;
+        margin: .5rem 0;
         font-size: .7rem !important;
+        text-align: center;
+    }
+
+    .row {
+        gap: 0 !important;
     }
 
     .cardDetails {
@@ -275,9 +294,56 @@ footer svg {
     .card-bodyDetails div {
         flex-direction: column;
     }
+
+    .table {
+        width: 95% !important;
+    }
 }
 
 @media screen and (max-width: 576px) {
+
+    .logo img {
+        width: 8rem;
+        height: 2rem;
+    }
+
+    .nav-link {
+        background-color: #d90368;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: .6rem;
+        padding: .2rem .5rem !important;
+        font-size: .8rem !important;
+    }
+
+    .formContainer {
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    .inputContainer {
+        width: 100%;
+        margin: 0 auto!important;
+    }
+
+    .textContain {
+        width: 100%;
+    }
+
+    .input-group {
+        width: 100% !important;
+        margin-bottom: .5rem;
+    }
+
+    .input-group>.form-control{
+        width: 30% !important;
+    }
+
+    .row {
+        gap: 1rem !important;
+    }
+
+
+
     footer {
         height: 12vh;
         flex-direction: column;
