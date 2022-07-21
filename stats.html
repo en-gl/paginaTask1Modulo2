@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Stats</title>
 
     <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="shortcut icon" href="./assets/img/ico/favicon.ico" type="image/x-icon">
+
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -15,48 +17,55 @@
 
 <body>
 
-    <header class="">
-        <div class="">
+    <header class="navbar navbar-expand-lg bg-dark d-flex justify-content-between">
+
+        <div class="logoContain">
             <a class="navbar-brand logo" href="#">
-                <img class="ms-4" src="./assets/img/Logo_Amazing_Events.png" alt="LOGO" height="60rem">
+                <img class="ms-4" src="./assets/img/Logo_Amazing_Events.png" alt="LOGO" height="60">
             </a>
         </div>
 
-        <nav>
-            <div class="navBar d-flex align-items-center gap-4 me-4 flex-wrap">
-                <a class="nav-link text-white" aria-current="page" href="./index.html">Home</a>
-                <a class="nav-link text-white" href="./upcomingEvents.html">Upcoming Events</a>
-                <a class="nav-link text-white" href="./pastEvents.html">Past Events</a>
-                <a class="nav-link text-white" href="./contact.html">contact</a>
-                <a class="nav-link text-white active disabled" href="#">stats</a>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <div class="navbar-nav">
+                        <a class="nav-link text-white" href="./index.html">Home</a>
+                        <a class="nav-link text-white" href="./upcomingEvents.html">Upcoming Events</a>
+                        <a class="nav-link text-white" href="./pastEvents.html">Past Events</a>
+                        <a class="nav-link text-white" href="./contact.html">contact</a>
+                        <a class="nav-link text-white active disabled" href="./stats.html">stats</a>
+                    </div>
+                </div>
             </div>
         </nav>
+
     </header>
 
 
     <main class="pb-5">
 
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+        <div id="carouselExampleCaptions" class="carousel slide border-bottom border-dark" data-bs-ride="false">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://d31dn7nfpuwjnm.cloudfront.net/images/valoraciones/0021/8736/mejores-relojes-para-correr.jpg?1448555502"
-                        class="d-block w-75" style="margin: 0 auto;" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h1 class="mb-3">Stats</h1>
+                    <img src="https://wallpapercave.com/wp/wp2042571.jpg" class="d-block w-100 imgCarousel"
+                        style="margin: 0 auto;" alt="...">
+                    <div class="carousel-caption d-md-block">
+                        <h1 class="mb-4 ">Stats</h1>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
+                    <img src="./assets/img/carousel/1.jpg" class="d-block w-100 imgCarousel" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
+                    <img src="./assets/img/carousel/2.jpg" class="d-block w-100 imgCarousel" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
                     </div>
                 </div>
             </div>
@@ -73,7 +82,7 @@
         </div>
 
         <div class="table-responsive pt-3 pb-3">
-            <table class="table table-primary table-striped table-hover table-bordered border-primary w-75 m-auto align-middle">
+            <table class="table table-dark table-striped table-hover table-bordered border-primary m-auto align-middle">
                 <thead class="table-light table-bordered border-dark">
                     <tr>
                         <th colspan="3">Events Statics</th>
@@ -91,15 +100,11 @@
                         <td> </td>
                         <td> </td>
                     </tr>
-                </tbody>
 
-                <thead class="table-light">
                     <tr>
-                        <th colspan="3">Upcoming Events stadistics by category</th>
+                        <th  class="table-light" colspan="3">Upcoming Events stadistic by category</th>
                     </tr>
-                </thead>
 
-                <tbody class="table-group-divider">
                     <tr>
                         <td>Categories</td>
                         <td>Revenues</td>
@@ -121,15 +126,11 @@
                         <td> </td>
                     </tr>
 
-                </tbody>
 
-                <thead class="table-light">
                     <tr>
-                        <th colspan="3">Past Events staditics by category</th>
+                        <th class="table-light" colspan="3">Past Events Stadistic by category</th>
                     </tr>
-                </thead>
 
-                <tbody class="table-group-divider">
                     <tr>
                         <td>Categories</td>
                         <td>Revenues</td>
@@ -160,15 +161,15 @@
                         <td> </td>
                         <td> </td>
                     </tr>
-                </tbody>
 
+                </tbody>
             </table>
+
         </div>
 
     </main>
 
-    <footer class="d-flex justify-content-between">
-
+    <footer class="d-flex justify-content-between bg-dark">
         <div class="rrss d-flex gap-5 align-items-center ms-5">
             <a href="">
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" fill="currentColor" class="bi bi-instagram w-75"
@@ -199,8 +200,12 @@
         <h2 class="align-self-center me-5">
             Cohort
         </h2>
-
     </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
 
 </body>
 

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event details</title>
+    <title>Contact Us</title>
 
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="shortcut icon" href="./assets/img/ico/favicon.ico" type="image/x-icon">
@@ -17,9 +17,8 @@
 
 <body>
 
-    
     <header class="navbar navbar-expand-lg bg-dark d-flex justify-content-between">
-
+        
         <div class="logoContain">
             <a class="navbar-brand logo" href="#">
                 <img class="ms-4" src="./assets/img/Logo_Amazing_Events.png" alt="LOGO" height="60">
@@ -38,7 +37,7 @@
                         <a class="nav-link text-white" href="./index.html">Home</a>
                         <a class="nav-link text-white" href="./upcomingEvents.html">Upcoming Events</a>
                         <a class="nav-link text-white" href="./pastEvents.html">Past Events</a>
-                        <a class="nav-link text-white" href="./contact.html">contact</a>
+                        <a class="nav-link text-white active disabled" href="#">contact</a>
                         <a class="nav-link text-white" href="./stats.html">stats</a>
                     </div>
                 </div>
@@ -49,39 +48,59 @@
 
     <main class="pb-5">
 
-        <div class="container-fluid">
-
-            <div class="cardContain w-75 m-auto pt-5 d-flex flex-column justify-content-center">
-                <div class="card cardDetails">
-                    <div class="imgCardContainerDetails mt-auto mb-auto">
-                        <img src="https://www.latercera.com/resizer/injhlv-leMP1QhSzfv63DVFF7sQ=/900x600/smart/cloudfront-us-east-1.images.arcpublishing.com/copesa/HOEII6NCQFBYFIOL6YLCGSZPGE.jpg" class="card-img-top" alt="eventoCine">
+        <div id="carouselExampleCaptions" class="carousel slide border-bottom border-dark" data-bs-ride="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://wallpapercave.com/wp/wp2042571.jpg" class="d-block w-100 imgCarousel" style="margin: 0 auto;"
+                        alt="...">
+                    <div class="carousel-caption d-md-block">
+                        <h1 class="mb-4 ">Contact Us</h1>
                     </div>
-                    <div class="card-bodyDetails text-center d-flex">
-                        <h2 class="card-title text-bg-dark">museum day</h2>
-                        <h2>xx/xx/xxxx</h2>
-                        <h4 class="card-text">full day visit to the dinosaur museum...</h4>
-                        <p>Category: "........"</p>
-                        <p>place : "........"</p>
-
-                        <div class="d-flex justify-content-around flex-wrap gap-3">
-
-                            <h5>Capacity: 30 persons</h5>
-                            <h5>Estimated attendance: 25 persons</h5>
-                            <h6>
-                                Price $0000
-                            </h6>
-                        </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/img/carousel/1.jpg" class="d-block w-100 imgCarousel" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/img/carousel/2.jpg" class="d-block w-100 imgCarousel" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
                     </div>
                 </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
 
+        <div class="container formContainer">
+            <form class="d-flex form" action="#">
+
+                <label for="name">Name:</label>
+                <input name="name" id="name" type="text">
+
+                <label  for="email">Email:</label>
+                <input name="email" id="email" type="email">
+
+                <label for="message">message:</label>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+
+                <input class="submit align-self-end" type="submit" value="submit">
+            </form>
         </div>
 
     </main>
 
-    <footer class="d-flex justify-content-between">
-
-        <div class="rrss d-flex gap-5 align-items-center mb-3 pt-3">
+    <footer class="d-flex justify-content-between bg-dark">
+        <div class="rrss d-flex gap-5 align-items-center ms-5">
             <a href="">
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" fill="currentColor" class="bi bi-instagram w-75"
                     viewBox="0 0 16 16">
@@ -108,15 +127,15 @@
         </div>
 
 
-        <h2 class="align-self-center">
+        <h2 class="align-self-center me-5">
             Cohort
         </h2>
-
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
+
 </body>
 
 </html>
